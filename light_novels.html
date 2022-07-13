@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DNovel - Download Novels for Free</title>
+  <!-- Meta -->
+  <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
+  <meta property="og:title" content="DNovel - Download Novels for Free"/>
+  <meta property="og:description" content="DNovels is a webpage without ads. Downloading Novels is easy enough"/>
+  <meta property="og:type" content="website" /> 
+  <meta property="og:url" content="https://www.dnovels.cf" /> 
+  <meta property="og:site_name" content="dnovels" /> 
+  <meta property="og:image" content="https://noveltime.github.io/dlnovels/icon/logo.png"/>
+  <meta name="twitter:card" content="summary_large_image" /> 
+  <meta name="twitter:description" content="DNovels is a webpage without ads. Downloading Novels is easy enough" /> 
+  <meta name="twitter:title" content="DNovels - Download Novels for Free" /> 
+  <meta name="twitter:image" content="https://noveltime.github.io/dlnovels/icon/logo.png"/>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://noveltime.github.io/dlnovels/icon/favicon.ico"/>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style type="text/css" media="all">
+    ul li a{
+      text-decoration: none
+    }
+    ul li a:hover{
+      text-decoration: underline;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="main-container">
+    
+    <!-- Menu Content -->
+    <div class="menu w3-card-4 w3-bar" style="padding: 5px">
+      <div class="menu-btn w3-bar-item" onclick="w3_open()">
+        <i class="fa-solid fa-bars" style="font-size: 17pt;margin: 0;padding: 0"></i>
+      </div>
+      <div class="webtitle w3-bar-item">
+        <h1 style="font-size: 13pt;margin: 0;padding: 0">DNovels</h1>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width: 60%;z-index: 1" id="mySidebar">
+      <!-- Button close menu c -->
+      <button class="w3-btn w3-hide-large w3-bar-item" style="text-align: right;" onclick="w3_close()">&times;</button>
+      <a href="https://noveltime.github.io/dlnovels/" class="w3-bar-item w3-btn">Home</a>
+      <a href="https://noveltime.github.io/dlnovels/light_novels.html" class="w3-bar-item w3-btn">Light Novels</a>
+    </div>
+    
+    <div class="w3-container listContent">
+      
+      <div>
+        <h3>Light Novels</h3>
+      </div>
+      <hr>
+      <div class="w3-container">
+        
+        <ul id="list" class="w3-ul" style="list-style-type: decimal">
+          <li><a href="">Classroom of the Elite</a></li>
+          <li><a href="">The World of Otome Games is Tough For Mobs</a></li>
+          <li><a href="">DanMachi</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <footer class="w3-container w3-green w3-center" style="margin-top: 10px;padding: 10px 5px;font-size: 8pt">
+      <a href="#">Contact Us</a> |
+      <a href="">Follow Us</a>
+    </footer>
+  </div>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+  <script>
+   function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+  
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+  <script>
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("list");
+    switching = true;
+    /* Make a loop that will continue until
+    no switching has been done: */
+    while (switching) {
+      // Start by saying: no switching is done:
+      switching = false;
+      b = list.getElementsByTagName("LI");
+      // Loop through all list items:
+      for (i = 0; i < (b.length - 1); i++) {
+        // Start by saying there should be no switching:
+        shouldSwitch = false;
+        /* Check if the next item should
+        switch place with the current item: */
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          /* If next item is alphabetically lower than current item,
+          mark as a switch and break the loop: */
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        /* If a switch has been marked, make the switch
+        and mark the switch as done: */
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  </script>
+</body>
+</html>
