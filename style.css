@@ -20,3 +20,5 @@ a{text-decoration: none;color: inherit}
   font-size: 13pt;
   padding: 5px;
 }
+/*custom css framework*/
+.underline{text-decoration: underline}
