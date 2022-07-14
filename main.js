@@ -14,4 +14,4 @@ if(window.desktopcheck()){
 //QR code
 let qrCode = document.getElementById("qrcode");
 qrCode.setAttribute("src","");
-qrCode.src = "icon/qrcode.png";
+qrCode.src = "https://noveltime.github.io/dlnovels/icon/qrcode.png";
