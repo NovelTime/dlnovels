@@ -34,5 +34,17 @@ a{text-decoration: none;color: inherit}
   font-size: 13pt;
   padding: 5px;
 }
+.qrcode{
+  widows: 100%;
+  height: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.qrcode img{
+  width: 50%;
+  height: auto;
+}
 /*custom css framework*/
 .underline{text-decoration: underline}
