@@ -110,7 +110,7 @@
         </div>
       </div>
       <!-- Comment Box-->
-      <!--<div class="comments">
+      <div class="comments">
         <form action="#" class="w3-form" id="commentsForm">
           <fieldset>
             <legend><span>Comments</span></legend>
@@ -122,37 +122,6 @@
             <button type="submit" class="w3-btn w3-green" onclick="sendMessage()">SEND COMMENT</button>
           </fieldset>
         </form>
-      </div>-->
-      <div class="comments">
-      
-        <!-- Title, with comment count -->
-        <h2><span id="comments-count"></span> Comments</h2>
-      
-        <!-- Display comments here -->
-        <ul id="comments-list"></ul>
-      
-        <!-- Reference to return comment form after this span, when the reply form is cancelled -->
-        <span id="comment-container"></span>
-      
-        <!-- Comment form -->
-        <form id="comment" style="display:block;">
-          <h3 id="comment-form-title">Leave a comment</h3>
-          <textarea id="message" type="text" placeholder="Comment (HTML supported)" required></textarea>
-          <input id="name" type="text" placeholder="Name" required>
-          <input id="email" type="email" placeholder="Email" required>
-          <button class="btn" type="submit" name="action">Post Comment</button>
-        </form>
-      
-        <!-- Reply form -->
-        <form id="reply" style="display:none;">
-          <h3 id="reply-form-title"></h3>
-          <div id="cancel-reply"><a href="#!" class="cancel-reply-link">Cancel Reply</a></div>
-          <textarea id="message" type="text" placeholder="Comment (HTML supported)" required></textarea>
-          <input id="name" type="text" placeholder="Name" required>
-          <input id="email" type="email" placeholder="Email" required>
-          <button class="btn" type="submit" name="action">Post Comment</button>
-        </form>
-      
       </div>
     </div>
     
@@ -163,9 +132,43 @@
   </div>
   
   <!-- Project -->
-  <!--<script src="https://www.gstatic.com/firebasejs/9.9.0/firebase.js"></script
-  <script src="https://noveltime.github.io/dlnovels/comments.js"></script>-->
-  <script src="https://noveltime.github.io/dlnovels/js/fire-comments.min.js"></script>
+  <!--<script src="https://www.gstatic.com/firebasejs/9.9.0/firebase.js"></script>-->
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBF3gd9Tn9uRwvuWDY0_glpcmFrwOPhZAY",
+    authDomain: "web-dnovels.firebaseapp.com",
+    databaseURL: "https://web-dnovels-default-rtdb.firebaseio.com",
+    projectId: "web-dnovels",
+    storageBucket: "web-dnovels.appspot.com",
+    messagingSenderId: "644268467476",
+    appId: "1:644268467476:web:c35e6edf0a21f78820ce01",
+    measurementId: "G-V49VBD5MR7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  
+  var database = app.database();
+    
+    function sendMessage() {
+      var name = document.getElementById('Name').value;
+      var message = document.getElementById('message').value;
+    
+      var newMessageKey = database.ref().child('comments').push().key;
+      database.ref('comments/' + newMessageKey + 'Name').set(name);
+      database.ref('comments/' + newMessageKey + 'Message').set(message);
+    }
+</script>
+  <!--<script src="https://noveltime.github.io/dlnovels/comments.js"></script>-->
   <script src="https://noveltime.github.io/dlnovels/main.js"></script>
   <script>
    function w3_open() {
