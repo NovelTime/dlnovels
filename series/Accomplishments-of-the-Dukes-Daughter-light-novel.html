@@ -109,7 +109,7 @@
           <img id="qrcode" alt="qrCode"/>
         </div>
       </div>
-      <!-- Comment Box-->
+      <!-- Comment Box
       <div class="comments">
         <form action="#" class="w3-form" id="commentsForm">
           <fieldset>
@@ -122,52 +122,17 @@
             <button type="submit" class="w3-btn w3-green" onclick="sendMessage()">SEND COMMENT</button>
           </fieldset>
         </form>
-      </div>
+      </div>-->
     </div>
     
     <footer class="w3-container w3-green w3-center" style="margin-top: 10px;padding: 10px 5px;font-size: 8pt">
-      <a href="aboutus.html">Contact Us</a> |
-      <a href="https://www.facebook.com/DNovels-Download-Novels-for-Free-110584871719266/">Follow Us</a>
+      <a href="https://noveltime.github.io/dlnovels/aboutus.html">Contact Us</a> |
+      <a href="https://www.facebook.com/dnovels1/">Follow Us</a>
     </footer>
   </div>
   
   <!-- Project -->
   <!--<script src="https://www.gstatic.com/firebasejs/9.9.0/firebase.js"></script>-->
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBF3gd9Tn9uRwvuWDY0_glpcmFrwOPhZAY",
-    authDomain: "web-dnovels.firebaseapp.com",
-    databaseURL: "https://web-dnovels-default-rtdb.firebaseio.com",
-    projectId: "web-dnovels",
-    storageBucket: "web-dnovels.appspot.com",
-    messagingSenderId: "644268467476",
-    appId: "1:644268467476:web:c35e6edf0a21f78820ce01",
-    measurementId: "G-V49VBD5MR7"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  
-  var database = app.database();
-    
-    function sendMessage() {
-      var name = document.getElementById('Name').value;
-      var message = document.getElementById('message').value;
-    
-      var newMessageKey = database.ref().child('comments').push().key;
-      database.ref('comments/' + newMessageKey + 'Name').set(name);
-      database.ref('comments/' + newMessageKey + 'Message').set(message);
-    }
-</script>
   <!--<script src="https://noveltime.github.io/dlnovels/comments.js"></script>-->
   <script src="https://noveltime.github.io/dlnovels/main.js"></script>
   <script>
