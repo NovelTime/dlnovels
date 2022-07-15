@@ -9,10 +9,10 @@ const firebaseConfig = {
 };
 
   // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
- firebase.analytics();
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-var database = firebase.database();
+var database = app.database();
 
 function sendMessage(){
   var name = document.getElementById('Name').value;
