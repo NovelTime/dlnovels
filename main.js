@@ -13,3 +13,6 @@ if(window.desktopcheck()){
 }
 let qrCode = document.getElementById('qrcode');
 qrCode.setAttribute("src","https://noveltime.github.io/dlnovels/icon/qrcode.png");
+//World Link Blank
+let allLinks = document.querySelectorAll('a');
+allLinks.setAttribute('target','_blank');
