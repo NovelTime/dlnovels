@@ -14,5 +14,5 @@ if(window.desktopcheck()){
 
 $('#qrcode').attr('src','https://noveltime.github.io/dlnovels/icon/qrcode.png');
 
-var webnovel = $("<a>",{href:"webnovel.html", class:"w3-bar-item w3-btn"},"</a>").text('Web Novel');
+var webnovel = $("<a>",{href:"https://www.dnovels.cf/webnovel.html", class:"w3-bar-item w3-btn"},"</a>").text('Web Novel');
 $("#mySidebar").append(webnovel);
