@@ -14,5 +14,9 @@ if(window.desktopcheck()){
 
 $('#qrcode').attr('src','https://noveltime.github.io/dlnovels/icon/qrcode.png');
 
+//Adding menu items
 var webnovel = $("<a>",{href:"https://www.dnovels.cf/webnovel.html", class:"w3-bar-item w3-btn"},"</a>").text('Web Novel');
 $("#mySidebar").append(webnovel);
+
+var ebookApp = $("<a>",{href:"http://bit.ly/3BdQ3bJ", class:"w3-bar-item w3-btn"},"</a>").text('Book Reader App');
+$("#mySidebar").append(ebookApp);
