@@ -1,6 +1,7 @@
 //Show alert when connection lost
 window.addEventListener('offline', function(event){
-    alert("You are offline please turn on internet connection to run website");
+    document.getElementsByTagName('body')[0].style.display="none";
+    alert("You are offline please turn on internet connection and refresh the page.");
 });
 //Prevent user from desktop mode
 window.desktopcheck = function() {
