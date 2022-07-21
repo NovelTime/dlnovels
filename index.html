@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
 <body>
@@ -48,9 +49,10 @@
       <a href="https://www.dnovels.cf/light_novels.html" class="w3-bar-item w3-btn">Light Novels</a>
     </div>
     <div class="w3-container">
-      <div>
-        <p class="w3-text-blue"><strong><a href="https://www.facebook.com/dnovels1/">Follow us on facebook to keep track on new novel release</a></strong></p>
+      <div id="recommendedTitle" class="w3-text-blue" style="border-bottom: 1px solid blue;margin: 5px 0">
+        <h5 style="padding-left: 10px"><i class="fa-solid fa-face-smile-plus"></i> NEWEST POST</h5>
       </div>
+      <div w3-include-html="homepage.html" id="newPost"></div>
       <div id="recommendedTitle" style="border-bottom: 1px solid orange">
         <h5 class="w3-text-orange"><i class="fa-solid fa-chart-simple"></i> Recommended</h5>
       </div>
@@ -155,6 +157,7 @@
         </script>
   <script src="main.js"></script>
   <script>
+   w3.includeHTML();
    function w3_open() {
       document.getElementById("mySidebar").style.display = "block";
     }
