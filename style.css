@@ -53,7 +53,7 @@ a{text-decoration: none;color: inherit}
 /*New Item*/
 .novels-main{
    margin:0;
-   padding:0;
+   padding:10px;
    max-width:100%;
    display:grid;
    grid-row-gap: 10px;
